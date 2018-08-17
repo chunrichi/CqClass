@@ -1,0 +1,68 @@
+/* pages/index/index.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 1170rpx;
+  z-index: 101;
+  position: fixed;
+}
+
+.class-box{
+  height: 1000rpx;
+  /* 微信认为 750rpx=20rem 为全屏宽度 */
+  /* https://blog.csdn.net/qq_31383345/article/details/52817807 */
+  width: 750rpx;
+  display: flex;
+}
+
+.top{
+  display: flex;
+  /* 弹性布局flex，详情见 https://www.cnblogs.com/xuyuntao/articles/6391728.html */
+  flex-direction: row;
+  margin-left: 40rpx;
+  color:#6CA9D6;
+}
+
+.top-text{
+  width: 110rpx;
+  height: 36rpx;
+  font-size: 10pt;
+  
+  display: flex;
+  /* 水平居中 */
+  justify-content:center;
+  /* 垂直居中 */
+  align-items: center；
+}
+
+.left-num{
+  width: 35rpx;
+  height: 100rpx;
+  font-size: 9pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.flex-item {
+  width: 95rpx;
+  height: 100rpx;
+}
+
+.kcb-item {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.smalltext {
+  font-size: 8pt;
+  color: #fff;
+  padding-left: 2rpx;
+}
