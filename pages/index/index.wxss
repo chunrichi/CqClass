@@ -1,1 +1,182 @@
 /* pages/index/index.wxss */
+page{
+    padding: 0;
+    margin: 0;
+    background-color: #6CA9D6;
+    height: 100%;
+    overflow: hidden;
+}
+
+form{
+    /* 让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容： */
+    flex: 1;
+    display: flex;
+    /* 设置 <div> 元素内弹性盒元素的方向：
+        column:灵活的项目将垂直显示，正如一个列一样。 */
+    flex-direction: column;
+    /* 元素被拉伸以适应容器。 */
+    align-items: stretch;
+    justify-content: center;
+}
+
+.title{
+  position: absolute;
+  top: 30rpx;
+  left: 50%;
+  width: 600rpx;
+  height: 200rpx;
+  margin-left: -300rpx;
+}
+
+.head {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 50%; */
+  width: 750rpx;
+  margin-left: -500rpx;
+  margin-bottom: 60rpx;
+  height: 200rpx;
+  transition: all .35s ease;
+}
+
+/* 输入框的样式 */
+.input-group{
+    display: flex;
+    align-items: center;
+    padding: 25rpx 10rpx;
+    margin: 40rpx 3%;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #f4f4f4;
+    /* 过渡属性 */
+    transition: all .25s ease-in-out;
+}
+
+/* 输入框点击之后的样式 */
+.input-group.active {
+  border: 2px solid #7acfa6;
+}
+
+.input-label{
+    color: #888;
+    font-size: 13pt;
+    height: 25rpx;
+    line-height: 25rpx;
+    padding: 0 25rpx;
+    border-right: 1px solid #d8d8d8;
+}
+
+.input-group input,
+.input-group picker {
+  flex: 1;
+  font-size: 13pt;
+  min-height: 52rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  padding: 0 25rpx;
+}
+
+.input-placeholder,
+.input-group picker.placeholder {
+  color: #ccc;
+}
+
+.login-help {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30rpx;
+  font-size: 10pt;
+  color: #bbb;
+}
+.login-help-img {
+  width: 11pt;
+  height: 11pt;
+  margin: 0 5rpx;
+}
+
+/* 按钮样式 */
+.confirm-btn{
+    margin: 50rpx 3%;
+}
+
+/* 帮助内容 */
+.help{
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 80%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(22,22,22,.35);
+  /* transform: translate3d(0,-400rpx,0); */
+}
+.box-hd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  border-bottom: 1px solid #eee;
+}
+.box-title {
+  font-size: 13pt;
+}
+.box-close {
+  position: absolute;
+  right: 20rpx;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx;
+}
+.box-bd {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx 40rpx 30rpx;
+}
+.help-q {
+  color: #999;
+  font-size: 11pt;
+  line-height: 200%;
+  margin-top: 5rpx;
+}
+.help-a {
+  text-indent: 1em;
+  line-height: 160%;
+  font-size: 14pt;
+  display: flex;
+  flex-direction: column;
+}
+.help-a text{
+  word-break: break-all;
+}
+/**登录动画**/
+.login_video{
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 750rpx;
+  margin-left: -375rpx;
+  height: 1334rpx;
+  margin-top: -667rpx;
+}
+.video_hidden{
+  visibility: hidden;
+}
+page .wx-video-bar{
+  display: none;
+}

@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -24,15 +24,24 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
-        
-      ]
+				{
+					"id": -1,
+					"name": "main",
+					"pathName": "pages/welcome/welcome",
+					"query": "uid=201503306?pwd=111"
+				}
+			]
 		}
 	}
 }

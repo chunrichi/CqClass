@@ -1,2 +1,7 @@
 <!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<text>待完善</text>
+<view class="login-help" bindtap="showHelp">
+退出登录</view>
+<view>
+    <button bindtap='logout' class="confirm-btn">登出</button>
+</view>

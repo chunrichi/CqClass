@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/class/class",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/welcome/welcome"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#6CA9D6",
-    "navigationBarTitleText": "长青课表",
+    "navigationBarTitleText": "长青盒子",
     "navigationBarTextStyle": "light"
   },
   "tabBar":{
@@ -18,14 +19,14 @@
       {
         "selectedIconPath": "images/index.png",
         "iconPath": "images/index-untuch.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/welcome/welcome",
         "text": "首页"
       },
       {
         "selectedIconPath": "images/class.png",
         "iconPath": "images/class-untuch.png",
         "pagePath": "pages/class/class",
-        "text": "日志"
+        "text": "课表"
       },
       {
         "selectedIconPath": "images/more.png",

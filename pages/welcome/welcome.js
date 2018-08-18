@@ -1,4 +1,4 @@
-// pages/test/test.js
+// pages/welcome/welcome.js
 Page({
 
   /**
@@ -62,11 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  logout:function(){
-      wx.clearStorage();
-      wx.redirectTo({
-          url: '../index/index',
-      })
   }
 })
