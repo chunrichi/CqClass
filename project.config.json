@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wx00e0cc8430be9427",
+	"appid": "wx5e846be660475b80",
 	"projectname": "wx_class_new",
 	"isGameTourist": false,
 	"condition": {
@@ -36,7 +36,7 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "main",
 					"pathName": "pages/welcome/welcome",
 					"query": "uid=201503306?pwd=111"
