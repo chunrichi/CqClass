@@ -1,2 +1,6 @@
 <!--pages/welcome/welcome.wxml-->
-<text>未完善</text>
+<scroll-view>
+<view style='border:1px solid redl;margin:0px auto;padding:0 15%;width:80%'>
+
+</view>
+</scroll-view>
