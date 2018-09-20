@@ -1,1 +1,36 @@
 /* pages/welcome/welcome.wxss */
+
+.header {
+    float: left;    
+    background: #6ca9d6;
+    width: 750rpx;
+    padding: 20rpx 0;
+}
+
+.header .headerArea {
+    float: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.imgPhoto {
+    float: left;
+    color: #005caf;
+    border-radius: 50%;
+    background: #a8d8b9;
+    width: 112rpx;
+    height: 112rpx;
+    line-height: 112rpx;
+    text-align: center;
+    box-shadow: 0px 0px 5px #888;
+}
+
+.name{
+    float: left;
+    font-size: 16pt;
+    font-family: 华文行楷;
+    font-weight: bold;
+    
+    margin-left: 60rpx;
+    
+}

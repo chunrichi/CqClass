@@ -79,7 +79,10 @@ Page({
     onShareAppMessage: function() {
 
     },
-    submitInfo: function (e) {
+    /**
+     * 登录的点击事件
+     */
+    submitInfo: function(e) {
         // console.log('form发生了submit事件，携带数据为：', e.detail.value)
         var that = this;
         app.globalData.uid = e.detail.value.uid;
@@ -93,16 +96,26 @@ Page({
             });
         } else {
             wx.request({
-                // url: 'http://39.107.243.115:5000/wechart/CqClassBox/login/uid=' + e.detail.value.uid + '&pwd=' + e.detail.value.pwd,
-                url: 'http://127.0.0.1:5000/wechart/CqClassBox/login/uid=' + e.detail.value.uid + '&pwd=' + e.detail.value.pwd,
-                success: function (res) {
+                url: 'http://39.107.243.115:5000/wechart/CqClassBox/login/uid=' + e.detail.value.uid + '&pwd=' + e.detail.value.pwd,
+                // url: 'http://127.0.0.1:5000/wechart/CqClassBox/login/uid=' + e.detail.value.uid + '&pwd=' + e.detail.value.pwd,
+                data: {
+                    semester_id: '49',
+                },
+                header: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                method: 'POST',
+
+                success: function(res) {
                     that.setData({
                         jsonStr: res.data,
                     })
+                    console.log("res:" + res)
+                    console.log(that)
                     console.log(res.data);
-                    console.log(res.data[0][0].stuName)
+                    console.log(res.data[0].stuName)
                     //账号密码错误以下功能实现密码错误Toast
-                    if (res.data[0][0].stuName == '') {
+                    if (res.data[0].stuName == '' || res.data[0].stuName == undefined) {
                         wx.showToast({
                             title: '账号密码有误',
                             image: '/images/info.png',
@@ -113,34 +126,52 @@ Page({
                         //设置本地Storage,维持登录态用
                         wx.setStorageSync('uid', e.detail.value.uid);
                         wx.setStorageSync('pwd', e.detail.value.pwd);
-                        // wx.navigateTo({
-                        //     url: '/pages/welcome/welcome'
-                        //     // url: '/pages/welcome/welcome?uid=' + e.detail.value.uid + '&pwd=' + e.detail.value.pwd
-                        // })
+                        // 登录获得的用户信息
+                        wx.setStorageSync('userMessage', res.data[0]);
+                        // 课表信息
+                        if (res.data[1]) {
+                            wx.setStorageSync('wlist', res.data[1]);
+                        } else {
+
+                            wx.showToast({
+                                title: '请求课表失败，请稍后再试！',
+                                image: '/images/info.png',
+                                duration: 2000
+                            });
+                        }
+                        // 跳转到主页面
                         wx.switchTab({
                             url: '../welcome/welcome',
                         })
                     }
+                },
+                fail: function() {
+                    wx.showTo
+                    ast({
+                        title: '服务器出错！请联系管理员',
+                        icon: 'none',
+                        duration: 1000
+                    });
                 }
             })
         }
     },
-    tapHelp: function (e) {
+    tapHelp: function(e) {
         if (e.target.id == 'help') {
             this.hideHelp();
         }
     },
-    showHelp: function (e) {
+    showHelp: function(e) {
         this.setData({
             'help_status': true
         });
     },
-    hideHelp: function(e){
+    hideHelp: function(e) {
         this.setData({
-            'help_status':false
+            'help_status': false
         });
     },
-    UidInput: function (e) {
+    UidInput: function(e) {
         if (e.detail.value.length >= 9) {
             wx.hideKeyboard();
         }

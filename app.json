@@ -2,11 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/class/class",
-    "pages/test/test",
+    "pages/more/more",
     "pages/welcome/welcome"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#6CA9D6",
     "navigationBarTitleText": "长青盒子",
     "navigationBarTextStyle": "light"
@@ -31,8 +31,8 @@
       {
         "selectedIconPath": "images/more.png",
         "iconPath": "images/more-untuch.png",
-        "pagePath": "pages/test/test",
-        "text": "开心测试"
+        "pagePath": "pages/more/more",
+        "text": "更多"
       }
     ]
   }

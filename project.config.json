@@ -8,10 +8,11 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.3.0",
 	"appid": "wx5e846be660475b80",
 	"projectname": "wx_class_new",
 	"isGameTourist": false,
@@ -33,13 +34,19 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": 0,
 					"name": "main",
 					"pathName": "pages/welcome/welcome",
 					"query": "uid=201503306?pwd=111"
+				},
+				{
+					"id": 1,
+					"name": "more",
+					"pathName": "pages/more/more",
+					"query": ""
 				}
 			]
 		}

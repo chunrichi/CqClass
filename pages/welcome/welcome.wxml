@@ -1,2 +1,33 @@
 <!--pages/welcome/welcome.wxml-->
-<text>未完善</text>
+<view class='header'>
+    <view class='headerArea'>
+        <view class='imgPhoto'>
+            <view>
+                {{firstName}}
+            </view>
+        </view>
+        <view class='name'>
+            <view>
+                {{userName}}
+            </view>
+            <view>
+                {{major}}
+            </view>
+        </view>
+    </view>
+</view>
+<scroll-view scroll-y='true' enable-back-to-top='true' style='display:flex;align-items: center;'>
+    <view wx:if="{{todayWeek!=false}}">
+        <view wx:for='{{todayWeek}}' wx:key='key-class' style='border:1px solid #6ca9d6;background:#6ca9d6;box-shadow:0px 0px 10px #888;width:80%;height:200rpx;border-radius:5px;margin:20px auto'>
+            <view style='text-align:center;margin:15rpx 0;'>
+                {{item.courseName}}
+            </view>
+                        <view style='text-align:center;margin:15rpx 0;'>
+                {{item.roomName}}
+            </view>
+
+        </view>
+    </view>
+
+
+</scroll-view>

@@ -1,6 +1,5 @@
 <!--pages/index/index.wxml-->
 <view>
-    
     <view class='head'>
 <image src='/images/logo-text.png' class='title'></image>
     </view>
