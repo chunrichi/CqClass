@@ -40,8 +40,7 @@
     * [ ] 实现...
 
 ## 效果展示
-![登录界面](http://wx2.sinaimg.cn/mw690/0065CGDggy1fvfy8ywe9cj30u01qggnz.jpg)![进入界面](http://wx2.sinaimg.cn/mw690/0065CGDggy1fvfy9zsj7qj30qo1jiaga.jpg)
-![显示课程页面](http://wx2.sinaimg.cn/mw690/0065CGDggy1fvfy9zsj7qj30qo1jiaga.jpg)![更多页面](http://wx1.sinaimg.cn/mw690/0065CGDggy1fvfyi16d96j30u01qgtdi.jpg)
+![展示](http://wx2.sinaimg.cn/mw690/0065CGDggy1fvfzn62kd9j31rp1597wh.jpg)
 
 ## 提交
 
